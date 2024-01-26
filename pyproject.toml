@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+namespaces = false
+
+[tool.setuptools.package-data]
+"TODO" = ["py.typed"]
+
+[project]
+name = "TODO"
+version = "0.1.5"
+authors = [
+  { name="Anaconda, Inc.", email="distribution_team@anaconda.com" },
+]
+description = "Collection of utilities used by the Packaging Automation and Tools Team"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.11"
+keywords = ["library", "utilities", "utils"]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Utilities",
+]
+dependencies = [
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov"]
+conda_build = ["conda-build"]
+
+[project.urls]
+"Homepage" = "https://github.com/TODO"
+"Bug Tracker" = "https://github.com/TODO/issues"
+"Repository" = "https://github.com/TODO"
+"Documentation" = "https://github.com/TODO/blob/main/README.md"
+
+# This causes an error saying that 'packages' is already defined and can't be overwritten.
+#[tool.setuptools]
+#packages = ["TODO"]
