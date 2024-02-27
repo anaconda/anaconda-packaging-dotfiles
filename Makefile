@@ -15,7 +15,7 @@ PYTHON3 := "$(CONDA_PREFIX)/bin/python3"
 .DEFAULT_GOAL := help
 
 CONDA_ENV_NAME ?= TODO
-SRC_DIRECTORY = TODO
+SRC_DIR = TODO
 TEST_DIR = tests/
 
 # `BROWSER_PYSCRIPT` and `PRINT_HELP_PYSCRIPT` are used to generate the output
