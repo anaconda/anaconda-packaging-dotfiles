@@ -93,14 +93,14 @@ dev: clean					## install the package's development version to a fresh environme
 	$(CONDA_ACTIVATE) $(CONDA_ENV_NAME) && pre-commit install
 
 test:						## executes unit test cases
-	$(PYTHON3) -m pytest -n auto --capture=no $($(TEST_DIR))
+	$(PYTHON3) -m pytest -n auto --capture=no $(TEST_DIR)
 
 test-debug:		## runs test cases with debugging info enabled
-	$(PYTHON3) -m pytest -n auto -vv --capture=no $($(TEST_DIR))
+	$(PYTHON3) -m pytest -n auto -vv --capture=no $(TEST_DIR)
 
 test-cov:					## checks test coverage requirements
 	$(PYTHON3) -m pytest -n auto --cov-config=.coveragerc --cov=$(SRC_DIR) \
-		$($(TEST_DIR)) --cov-fail-under=80 --cov-report term-missing
+		$(TEST_DIR) --cov-fail-under=80 --cov-report term-missing
 
 lint:						## runs the linter against the project
 	pylint --rcfile=.pylintrc $(SRC_DIR)
