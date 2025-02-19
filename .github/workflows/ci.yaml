@@ -50,7 +50,7 @@ jobs:
             path: ./feedstock
         - name: Cache conda env
           id: cache-conda
-          uses: actions/cache@13aacd865c20de90d75de3b17ebe84f7a17d57d2 # v4.0.0
+          uses: actions/cache@0c907a75c2c80ebcb7f088228285e798b750cf8f # v4.2.1
           env:
             cache-name: conda-env-cache
           with:
